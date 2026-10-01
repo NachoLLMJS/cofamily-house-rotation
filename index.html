@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ead9bd" />
+    <meta name="description" content="An interactive half-year view of a rotating co-family household" />
+    <title>The House That Takes Turns</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#rotation-controls">Skip to rotation controls</a>
+    <main>
+      <header class="masthead">
+        <div class="masthead__mark" aria-hidden="true"><span></span><i></i></div>
+        <div>
+          <p class="eyebrow">A Snowmoon household study</p>
+          <h1>The house that<br /><em>takes turns</em></h1>
+        </div>
+        <p class="intro">One dining room, many versions of home<br />Move through six months to watch people gather, children’s backpacks migrate, and care become a shared rhythm</p>
+      </header>
+
+      <section class="experience" aria-labelledby="room-heading">
+        <div class="scene-column">
+          <div class="scene-heading">
+            <div>
+              <p id="season-label" class="eyebrow">Early spring</p>
+              <h2 id="room-heading">March at the long table</h2>
+            </div>
+            <div class="legend" aria-label="Scene legend">
+              <span><i class="legend__resident"></i>Current household</span>
+              <span><i class="legend__visitor"></i>Visiting / moved children</span>
+            </div>
+          </div>
+          <div id="scene" class="scene-frame" role="img" aria-label="Interactive Three.js dining room with stylized family members and children’s backpacks"></div>
+          <div id="scene-summary" class="sr-only" aria-live="polite"></div>
+          <p id="scene-note" class="scene-note"></p>
+        </div>
+
+        <aside class="household-panel" aria-labelledby="household-title">
+          <div class="panel-number" aria-hidden="true">½</div>
+          <p class="eyebrow">Who is home now</p>
+          <h2 id="household-title">The current household</h2>
+          <div class="roster-group">
+            <h3>Current household</h3>
+            <ul id="resident-list" class="roster"></ul>
+          </div>
+          <div class="roster-group roster-group--visitors">
+            <h3>Visiting / moved children</h3>
+            <ul id="visitor-list" class="roster"></ul>
+          </div>
+          <div class="order-key">
+            <span>Dzego dinner order</span>
+            <p>Numbers travel with the person, not the house<br />An em dash means the passage does not give a number</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="rotation-controls" class="timeline" aria-labelledby="timeline-title">
+        <div class="timeline__copy">
+          <p class="eyebrow">Half-year rotation</p>
+          <h2 id="timeline-title">Care changes address<br />Belonging does not</h2>
+        </div>
+        <div class="timeline__control">
+          <div class="timeline__readout" aria-live="polite">
+            <strong id="month-readout">March</strong>
+            <span id="step-readout">01 / 06</span>
+          </div>
+          <input id="rotation-range" type="range" min="0" max="5" step="1" value="0" aria-label="Choose a month in the household rotation" aria-valuetext="March, early spring" />
+          <div id="month-labels" class="month-labels" aria-hidden="true"></div>
+          <div class="timeline__buttons">
+            <button id="previous" type="button" aria-label="Show previous month"><span aria-hidden="true">←</span> Previous</button>
+            <button id="next" type="button">Next <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Parenthood here is not a branch on a tree<br />It is a place set, a child’s bag unpacked, and a door that stays open</p>
+        <span>Interactive reading · Snowmoon</span>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
